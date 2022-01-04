@@ -16,7 +16,6 @@ SOURCES += \
 HEADERS += \
     menu.h \
     ui_menu.h \
-    ui_widget.h \
     widget.h
 
 # Default rules for deployment.

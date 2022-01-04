@@ -47,14 +47,14 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_5">
        <item>
-        <widget class="QPushButton" name="kot">
+        <widget class="QPushButton" name="change_cat_button">
          <property name="text">
           <string>сменить котика</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="ych_5">
+        <widget class="QPushButton" name="delete_ac_button">
          <property name="text">
           <string>удалить акаунт</string>
          </property>
@@ -74,14 +74,14 @@
         </spacer>
        </item>
        <item>
-        <widget class="QLabel" name="label_3">
+        <widget class="QLabel" name="users_label">
          <property name="text">
           <string>пользователи</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QListWidget" name="friend_2"/>
+        <widget class="QListWidget" name="users_list"/>
        </item>
       </layout>
      </item>
@@ -93,10 +93,9 @@
       <layout class="QFormLayout" name="formLayout"/>
      </item>
      <item>
-      <widget class="QTextEdit" name="TEXT">
+      <widget class="QTextEdit" name="messages">
        <property name="font">
         <font>
-         <family>Niagara Solid</family>
          <pointsize>20</pointsize>
         </font>
        </property>
@@ -144,7 +143,6 @@
          <widget class="QTextEdit" name="textEdit">
           <property name="font">
            <font>
-            <family>Niagara Solid</family>
             <pointsize>20</pointsize>
            </font>
           </property>
@@ -194,7 +192,7 @@
        <item>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
-          <widget class="QPushButton" name="push_grup">
+          <widget class="QPushButton" name="create_group_button">
            <property name="text">
             <string>создать группу</string>
            </property>
@@ -284,7 +282,7 @@
     </widget>
    </item>
    <item row="2" column="0">
-    <widget class="QPushButton" name="stop">
+    <widget class="QPushButton" name="stop_button">
      <property name="text">
       <string>stop</string>
      </property>

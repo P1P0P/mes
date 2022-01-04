@@ -19,26 +19,26 @@ class Ui_Widget
 public:
     QGridLayout *gridLayout;
     QVBoxLayout *verticalLayout;
-    QLabel *label_3;
+    QLabel *autorizaion_label;
     QHBoxLayout *horizontalLayout_4;
-    QLabel *label;
-    QLineEdit *Login;
+    QLabel *login_label;
+    QLineEdit *login_edit;
     QHBoxLayout *horizontalLayout_5;
-    QLabel *label_2;
-    QLineEdit *Pass;
-    QPushButton *PUSH;
-    QPushButton *reg_2;
-    QLabel *label_7;
+    QLabel *pass_label;
+    QLineEdit *pass_edit;
+    QPushButton *autorization_button;
+    QPushButton *reg_button;
+    QLabel *reg_label;
     QHBoxLayout *horizontalLayout;
-    QLabel *label_4;
-    QLineEdit *Login2;
+    QLabel *reg_login_label;
+    QLineEdit *reg_login_edit;
     QHBoxLayout *horizontalLayout_2;
-    QLabel *label_5;
-    QLineEdit *NIK;
+    QLabel *nik_label;
+    QLineEdit *nik_edit;
     QHBoxLayout *horizontalLayout_3;
-    QLabel *label_6;
-    QLineEdit *Pass2;
-    QPushButton *PUSH2;
+    QLabel *reg_pass_label;
+    QLineEdit *reg_pass_edit;
+    QPushButton *reg2_button;
     QListWidget *listWidget;
 
     void setupUi(QWidget *Widget)
@@ -50,106 +50,106 @@ public:
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        label_3 = new QLabel(Widget);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
+        autorizaion_label = new QLabel(Widget);
+        autorizaion_label->setObjectName(QString::fromUtf8("autorization_label"));
 
-        verticalLayout->addWidget(label_3);
+        verticalLayout->addWidget(autorizaion_label);
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
-        label = new QLabel(Widget);
-        label->setObjectName(QString::fromUtf8("label"));
+        login_label = new QLabel(Widget);
+        login_label->setObjectName(QString::fromUtf8("label"));
 
-        horizontalLayout_4->addWidget(label);
+        horizontalLayout_4->addWidget(login_label);
 
-        Login = new QLineEdit(Widget);
-        Login->setObjectName(QString::fromUtf8("Login"));
+        login_edit = new QLineEdit(Widget);
+        login_edit->setObjectName(QString::fromUtf8("Login"));
 
-        horizontalLayout_4->addWidget(Login);
+        horizontalLayout_4->addWidget(login_edit);
 
 
         verticalLayout->addLayout(horizontalLayout_4);
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
-        label_2 = new QLabel(Widget);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
+        pass_label = new QLabel(Widget);
+        pass_label->setObjectName(QString::fromUtf8("label_2"));
 
-        horizontalLayout_5->addWidget(label_2);
+        horizontalLayout_5->addWidget(pass_label);
 
-        Pass = new QLineEdit(Widget);
-        Pass->setObjectName(QString::fromUtf8("Pass"));
-        Pass->setEchoMode(QLineEdit::PasswordEchoOnEdit);
+        pass_edit = new QLineEdit(Widget);
+        pass_edit->setObjectName(QString::fromUtf8("Pass"));
+        pass_edit->setEchoMode(QLineEdit::PasswordEchoOnEdit);
 
-        horizontalLayout_5->addWidget(Pass);
+        horizontalLayout_5->addWidget(pass_edit);
 
 
         verticalLayout->addLayout(horizontalLayout_5);
 
-        PUSH = new QPushButton(Widget);
-        PUSH->setObjectName(QString::fromUtf8("PUSH"));
+        autorization_button = new QPushButton(Widget);
+        autorization_button->setObjectName(QString::fromUtf8("PUSH"));
 
-        verticalLayout->addWidget(PUSH);
+        verticalLayout->addWidget(autorization_button);
 
-        reg_2 = new QPushButton(Widget);
-        reg_2->setObjectName(QString::fromUtf8("reg_2"));
+        reg_button = new QPushButton(Widget);
+        reg_button->setObjectName(QString::fromUtf8("reg_2"));
 
-        verticalLayout->addWidget(reg_2);
+        verticalLayout->addWidget(reg_button);
 
-        label_7 = new QLabel(Widget);
-        label_7->setObjectName(QString::fromUtf8("label_7"));
+        reg_label = new QLabel(Widget);
+        reg_label->setObjectName(QString::fromUtf8("label_7"));
 
-        verticalLayout->addWidget(label_7);
+        verticalLayout->addWidget(reg_label);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        label_4 = new QLabel(Widget);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
+        reg_login_label = new QLabel(Widget);
+        reg_login_label->setObjectName(QString::fromUtf8("label_4"));
 
-        horizontalLayout->addWidget(label_4);
+        horizontalLayout->addWidget(reg_login_label);
 
-        Login2 = new QLineEdit(Widget);
-        Login2->setObjectName(QString::fromUtf8("Login2"));
+        reg_login_edit = new QLineEdit(Widget);
+        reg_login_edit->setObjectName(QString::fromUtf8("Login2"));
 
-        horizontalLayout->addWidget(Login2);
+        horizontalLayout->addWidget(reg_login_edit);
 
 
         verticalLayout->addLayout(horizontalLayout);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        label_5 = new QLabel(Widget);
-        label_5->setObjectName(QString::fromUtf8("label_5"));
+        nik_label = new QLabel(Widget);
+        nik_label->setObjectName(QString::fromUtf8("label_5"));
 
-        horizontalLayout_2->addWidget(label_5);
+        horizontalLayout_2->addWidget(nik_label);
 
-        NIK = new QLineEdit(Widget);
-        NIK->setObjectName(QString::fromUtf8("NIK"));
+        nik_edit = new QLineEdit(Widget);
+        nik_edit->setObjectName(QString::fromUtf8("NIK"));
 
-        horizontalLayout_2->addWidget(NIK);
+        horizontalLayout_2->addWidget(nik_edit);
 
 
         verticalLayout->addLayout(horizontalLayout_2);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        label_6 = new QLabel(Widget);
-        label_6->setObjectName(QString::fromUtf8("label_6"));
+        reg_pass_label = new QLabel(Widget);
+        reg_pass_label->setObjectName(QString::fromUtf8("label_6"));
 
-        horizontalLayout_3->addWidget(label_6);
+        horizontalLayout_3->addWidget(reg_pass_label);
 
-        Pass2 = new QLineEdit(Widget);
-        Pass2->setObjectName(QString::fromUtf8("Pass2"));
+        reg_pass_edit = new QLineEdit(Widget);
+        reg_pass_edit->setObjectName(QString::fromUtf8("Pass2"));
 
-        horizontalLayout_3->addWidget(Pass2);
+        horizontalLayout_3->addWidget(reg_pass_edit);
 
 
         verticalLayout->addLayout(horizontalLayout_3);
 
-        PUSH2 = new QPushButton(Widget);
-        PUSH2->setObjectName(QString::fromUtf8("PUSH2"));
+        reg2_button = new QPushButton(Widget);
+        reg2_button->setObjectName(QString::fromUtf8("PUSH2"));
 
-        verticalLayout->addWidget(PUSH2);
+        verticalLayout->addWidget(reg2_button);
 
 
         gridLayout->addLayout(verticalLayout, 0, 0, 1, 1);
@@ -168,16 +168,16 @@ public:
     void retranslateUi(QWidget *Widget)
     {
         Widget->setWindowTitle(QCoreApplication::translate("Widget", "Widget", nullptr));
-        label_3->setText(QCoreApplication::translate("Widget", "                    \320\220\320\262\321\202\320\276\321\200\320\270\320\267\320\260\321\206\320\270\321\217", nullptr));
-        label->setText(QCoreApplication::translate("Widget", "\320\233\320\276\320\263\320\270\320\275", nullptr));
-        label_2->setText(QCoreApplication::translate("Widget", "\320\277\320\260\321\200\320\276\320\273\321\214", nullptr));
-        PUSH->setText(QCoreApplication::translate("Widget", "\320\220\320\262\321\202\320\276\321\200\320\270\320\267\320\260\321\206\320\270\321\217", nullptr));
-        reg_2->setText(QCoreApplication::translate("Widget", "\320\240\320\265\320\263\320\270\321\201\321\202\321\200\320\260\321\206\320\270\321\217", nullptr));
-        label_7->setText(QCoreApplication::translate("Widget", "                   \320\240\320\265\320\263\320\270\321\201\321\202\321\200\320\260\321\206\320\270\321\217", nullptr));
-        label_4->setText(QCoreApplication::translate("Widget", "\320\273\320\276\320\263\320\270\320\275", nullptr));
-        label_5->setText(QCoreApplication::translate("Widget", "\320\275\320\270\320\272", nullptr));
-        label_6->setText(QCoreApplication::translate("Widget", "\320\277\320\260\321\200\320\276\320\273\321\214", nullptr));
-        PUSH2->setText(QCoreApplication::translate("Widget", "\320\240\320\265\320\263\320\270\321\201\321\202\321\200\320\260\321\206\320\270\321\217", nullptr));
+        autorizaion_label->setText(QCoreApplication::translate("Widget", "\320\220\320\262\321\202\320\276\321\200\320\270\320\267\320\260\321\206\320\270\321\217", nullptr));
+        login_label->setText(QCoreApplication::translate("Widget", "\320\233\320\276\320\263\320\270\320\275", nullptr));
+        pass_label->setText(QCoreApplication::translate("Widget", "\320\277\320\260\321\200\320\276\320\273\321\214", nullptr));
+        autorization_button->setText(QCoreApplication::translate("Widget", "\320\220\320\262\321\202\320\276\321\200\320\270\320\267\320\260\321\206\320\270\321\217", nullptr));
+        reg_button->setText(QCoreApplication::translate("Widget", "\320\240\320\265\320\263\320\270\321\201\321\202\321\200\320\260\321\206\320\270\321\217", nullptr));
+        reg_label->setText(QCoreApplication::translate("Widget", "                   \320\240\320\265\320\263\320\270\321\201\321\202\321\200\320\260\321\206\320\270\321\217", nullptr));
+        reg_login_label->setText(QCoreApplication::translate("Widget", "\320\273\320\276\320\263\320\270\320\275", nullptr));
+        nik_label->setText(QCoreApplication::translate("Widget", "\320\275\320\270\320\272", nullptr));
+        reg_pass_label->setText(QCoreApplication::translate("Widget", "\320\277\320\260\321\200\320\276\320\273\321\214", nullptr));
+        reg2_button->setText(QCoreApplication::translate("Widget", "\320\240\320\265\320\263\320\270\321\201\321\202\321\200\320\260\321\206\320\270\321\217", nullptr));
     } // retranslateUi
 
 };

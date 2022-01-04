@@ -9,14 +9,14 @@ Widget::Widget(QWidget *parent)
 
 
     ui->setupUi(this);
-    ui->label_4->hide();
-    ui->label_5->hide();
-    ui->label_6->hide();
-    ui->label_7->hide();
-    ui->NIK->hide();
-    ui->Login2->hide();
-    ui->Pass2->hide();
-    ui->PUSH2->hide();
+    ui->reg_login_label->hide();
+    ui->nik_label->hide();
+    ui->reg_pass_label->hide();
+    ui->reg_label->hide();
+    ui->nik_edit->hide();
+    ui->reg_login_edit->hide();
+    ui->reg_pass_edit->hide();
+    ui->reg2_button->hide();
     db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("bd_password");
     db.open();
@@ -49,9 +49,9 @@ Widget::Widget(QWidget *parent)
      n++;
     }
     QObject::connect(ui->listWidget,SIGNAL(itemDoubleClicked(QListWidgetItem*)),this,SLOT(vibor()));
-    QObject::connect(ui->PUSH,SIGNAL(clicked()),this,SLOT(Push()));
-    QObject::connect(ui->PUSH2,SIGNAL(clicked()),this,SLOT(Push2()));
-    QObject::connect(ui->reg_2,SIGNAL(clicked()),this,SLOT(reg_2()));
+    QObject::connect(ui->autorization_button,SIGNAL(clicked()),this,SLOT(Push()));
+    QObject::connect(ui->reg2_button,SIGNAL(clicked()),this,SLOT(Push2()));
+    QObject::connect(ui->reg_button,SIGNAL(clicked()),this,SLOT(reg_2()));
 }
 
 Widget::~Widget()
@@ -62,26 +62,26 @@ Widget::~Widget()
 void Widget::vibor()
 {
     QSqlQuery msg(db);
-    ui->Login->setText(ui->listWidget->currentItem()->text());
-    ui->Pass->setText(mas[ui->listWidget->currentRow()]);
+    ui->login_edit->setText(ui->listWidget->currentItem()->text());
+    ui->pass_edit->setText(mas[ui->listWidget->currentRow()]);
 }
 void Widget::Push()
 {
-  std::string k="select LOGIN From bd where  LOGIN='"+ui->Login->text().toStdString()+"' and PASS='"+ui->Pass->text().toStdString()+"'";
+  std::string k="select LOGIN From bd where  LOGIN='"+ui->login_edit->text().toStdString()+"' and PASS='"+ui->pass_edit->text().toStdString()+"'";
   QSqlQuery msg(tt);
   QSqlQuery msgg(db);
   msg.exec(k.c_str());
   if (msg.next())
   {
 
-      std::string k="select LOGIN From pass where  LOGIN='"+ui->Login->text().toStdString()+"'";
+      std::string k="select LOGIN From pass where  LOGIN='"+ui->login_edit->text().toStdString()+"'";
       msgg.exec(k.c_str());
       if(!msgg.next())
       {
-      k="Insert into pass(LOGIN,PASS) values ('"+ui->Login->text().toStdString()+"','"+ ui->Pass->text().toStdString()+"')";
+      k="Insert into pass(LOGIN,PASS) values ('"+ui->login_edit->text().toStdString()+"','"+ ui->pass_edit->text().toStdString()+"')";
       msgg.exec(k.c_str());
       }
-      k="select id From bd where  LOGIN='"+ui->Login->text().toStdString()+"'";
+      k="select id From bd where  LOGIN='"+ui->login_edit->text().toStdString()+"'";
       msg.exec(k.c_str());
       msg.next();
       Menu *m=new Menu(nullptr,msg.value(0).toInt());
@@ -92,18 +92,18 @@ void Widget::Push()
   }
   else
   {
-      ui->Pass->setText("неправильный пароль");
+      ui->pass_edit->setText("неправильный пароль");
   }
 }
 void Widget::Push2()
 {
-    std::string k="select login From bd where  LOGIN='"+ui->Login2->text().toStdString()+"'";
+    std::string k="select login From bd where  LOGIN='"+ui->reg_login_edit->text().toStdString()+"'";
     QSqlQuery msg(tt);
     QSqlQuery msgg(db);
     msg.exec(k.c_str());
     if (!msg.next())
     {
-        k="Insert into pass(LOGIN,PASS) values ('"+ui->Login2->text().toStdString()+"','"+ ui->Pass2->text().toStdString()+"')";
+        k="Insert into pass(LOGIN,PASS) values ('"+ui->reg_login_edit->text().toStdString()+"','"+ ui->reg_pass_edit->text().toStdString()+"')";
         msgg.exec(k.c_str());
         k="Select max(id) From count1";
         msg.exec(k.c_str());
@@ -119,7 +119,7 @@ void Widget::Push2()
 
         k="Create table table_1_"+std::to_string(ww)+"(id_table_1 TEXT NOT NULL,name TEXT NOT NULL,id1 int)";
         std::string i="Create table table_2_"+std::to_string(ww)+"(id_table_2 TEXT NOT NULL, id1 int)";
-        std::string j="Insert into bd(id,LOGIN,PASS,NIK,num) values ("+std::to_string(ww)+",'"+ui->Login2->text().toStdString()+"','"+ ui->Pass2->text().toStdString()+"','"+ui->NIK->text().toStdString()+"','1')";
+        std::string j="Insert into bd(id,LOGIN,PASS,NIK,num) values ("+std::to_string(ww)+",'"+ui->reg_login_edit->text().toStdString()+"','"+ ui->reg_pass_edit->text().toStdString()+"','"+ui->nik_edit->text().toStdString()+"','1')";
         std::string q="insert into table_1_"+std::to_string(ww)+"(id_table_1,name,id1) values('0','ALL',0)";
         std::string qq="insert into name_0(id, bool) values("+std::to_string(ww)+",0)";
         msg.exec(("insert into count1(id) values("+std::to_string(ww)+")").c_str());
@@ -150,33 +150,33 @@ void Widget::Push2()
     }
     else
     {
-        ui->Login2->setText("логин используется");
+        ui->reg_login_edit->setText("логин используется");
     }
 }
 void Widget::reg_2()
 {
     if (bb==1)
     {
-        ui->label_4->hide();
-        ui->label_5->hide();
-        ui->label_6->hide();
-        ui->label_7->hide();
-        ui->NIK->hide();
-        ui->Login2->hide();
-        ui->Pass2->hide();
-        ui->PUSH2->hide();
+        ui->reg_login_label->hide();
+        ui->nik_label->hide();
+        ui->reg_pass_label->hide();
+        ui->reg_label->hide();
+        ui->nik_edit->hide();
+        ui->reg_login_edit->hide();
+        ui->reg_pass_edit->hide();
+        ui->reg2_button->hide();
         bb=0;
     }
     else
     {
-        ui->label_4->show();
-        ui->label_5->show();
-        ui->label_6->show();
-        ui->label_7->show();
-        ui->NIK->show();
-        ui->Login2->show();
-        ui->Pass2->show();
-        ui->PUSH2->show();
+        ui->reg_login_label->show();
+        ui->nik_label->show();
+        ui->reg_pass_label->show();
+        ui->reg_label->show();
+        ui->nik_edit->show();
+        ui->reg_login_edit->show();
+        ui->reg_pass_edit->show();
+        ui->reg2_button->show();
         bb=1;
     }
 }

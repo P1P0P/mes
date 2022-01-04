@@ -17,7 +17,7 @@
    <item row="0" column="0">
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QLabel" name="label_3">
+      <widget class="QLabel" name="autorization_label">
        <property name="text">
         <string>                    Авторизация</string>
        </property>
@@ -26,28 +26,28 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
-        <widget class="QLabel" name="label">
+        <widget class="QLabel" name="login_label">
          <property name="text">
           <string>Логин</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="Login"/>
+        <widget class="QLineEdit" name="login_edit"/>
        </item>
       </layout>
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
        <item>
-        <widget class="QLabel" name="label_2">
+        <widget class="QLabel" name="pass_label">
          <property name="text">
           <string>пароль</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="Pass">
+        <widget class="QLineEdit" name="pass_edit">
          <property name="echoMode">
           <enum>QLineEdit::PasswordEchoOnEdit</enum>
          </property>
@@ -56,21 +56,21 @@
       </layout>
      </item>
      <item>
-      <widget class="QPushButton" name="PUSH">
+      <widget class="QPushButton" name="autorization_button">
        <property name="text">
         <string>Авторизация</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="reg_2">
+      <widget class="QPushButton" name="reg_button">
        <property name="text">
         <string>Регистрация</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_7">
+      <widget class="QLabel" name="reg_label">
        <property name="text">
         <string>                   Регистрация</string>
        </property>
@@ -79,47 +79,47 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QLabel" name="label_4">
+        <widget class="QLabel" name="reg_login_label">
          <property name="text">
           <string>логин</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="Login2"/>
+        <widget class="QLineEdit" name="reg_login_edit"/>
        </item>
       </layout>
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QLabel" name="label_5">
+        <widget class="QLabel" name="nik_label">
          <property name="text">
           <string>ник</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="NIK"/>
+        <widget class="QLineEdit" name="nik_edit"/>
        </item>
       </layout>
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
-        <widget class="QLabel" name="label_6">
+        <widget class="QLabel" name="reg_pass_label">
          <property name="text">
           <string>пароль</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="Pass2"/>
+        <widget class="QLineEdit" name="reg_pass_edit"/>
        </item>
       </layout>
      </item>
      <item>
-      <widget class="QPushButton" name="PUSH2">
+      <widget class="QPushButton" name="reg2_button">
        <property name="text">
         <string>Регистрация</string>
        </property>
